@@ -1,4 +1,5 @@
 import gitinit.Calculator;
+import gitinit.functions.Sum;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -6,30 +7,15 @@ import static org.junit.Assert.assertEquals;
 public class CalculatorTest {
 
     @Test
-    public void sumShouldReturnTwo(){
+    public void sumShouldReturnTwo() {
+        assertEquals(3, new Calculator().solve("sqrt(2 + 1 * ( 4*5 ) - 35)"));
         Calculator calculator = new Calculator();
-        assertEquals(2, calculator.sum(1, 1));
+        assertEquals(2, calculator.solve(new Sum(1, 1)).intValue());
     }
 
     @Test
-    public void sumShouldReturnFour(){
+    public void sumShouldReturnADoubleValue() {
         Calculator calculator = new Calculator();
-        assertEquals(4, calculator.sum(2, 2));
+        assertEquals(4, calculator.solve(new Sum(0.9, 3.1)).intValue());
     }
-
-    @Test
-    public void multiplyShouldReturnTwentyFive(){
-        assertEquals(25, new Calculator().multiply(5, 5));
-    }
-
-    @Test
-    public void multiplyShouldReturnZero(){
-        assertEquals(0, new Calculator().multiply(5, 0));
-    }
-
-    @Test
-    public void sqrtShouldReturnNine(){
-        assertEquals(9, new Calculator().sqrt(81), 0.01);
-    }
-
 }
