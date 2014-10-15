@@ -17,4 +17,14 @@ public class CalculatorTest {
         assertEquals(4, calculator.sum(2, 2));
     }
 
+    @Test
+    public void multiplyShouldReturnTwentyFive(){
+        assertEquals(25, new Calculator().multiply(5, 5));
+    }
+
+    @Test
+    public void multiplyShouldReturnZero(){
+        assertEquals(0, new Calculator().multiply(5, 0));
+    }
+
 }
