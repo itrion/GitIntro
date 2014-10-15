@@ -8,7 +8,6 @@ public class CalculatorTest {
 
     @Test
     public void sumShouldReturnTwo() {
-        assertEquals(3, new Calculator().solve("sqrt(2 + 1 * ( 4*5 ) - 35)"));
         Calculator calculator = new Calculator();
         assertEquals(2, calculator.solve(new Sum(1, 1)).intValue());
     }
