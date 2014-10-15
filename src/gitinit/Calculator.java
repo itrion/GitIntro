@@ -13,4 +13,8 @@ public class Calculator {
     public int divide(int numberA, int numberB) {
         return numberA/numberB;
     }
+
+    public int multiply(int factorA, int factorB) {
+        return factorA * factorB;
+    }
 }
