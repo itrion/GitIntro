@@ -17,4 +17,21 @@ public class CalculatorTest {
         assertEquals(4, calculator.sum(2, 2));
     }
 
+    @Test
+    public void substractionThatShouldReturnThree() {
+        Calculator calculator = new Calculator();
+        assertEquals(3, calculator.substract(5,2));
+    }
+
+    @Test
+    public void substractionThatShouldReturnFive() {
+        Calculator calculator = new Calculator();
+        assertEquals(5, calculator.substract(10,5));
+    }
+
+    @Test
+    public void divisionThatShouldReturnTwo() {
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.divide(4, 2));
+    }
 }
