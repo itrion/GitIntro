@@ -8,4 +8,8 @@ public class Calculator {
     public int multiply(int factorA, int factorB) {
         return factorA * factorB;
     }
+
+    public double sqrt(int number) {
+        return Math.sqrt(number);
+    }
 }
